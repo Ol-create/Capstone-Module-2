@@ -26,7 +26,7 @@ To get a local copy up and running follow these simple example steps.
 - On the terminal, navigate into the directory like so: `cd Capstone-Module-2`
 
 ### Install
-- in visual studio code build with the command `npm run build` 
+- in visual studio code build with the command `npm run build`
 - and run the distribution with the command `npm start`
 ## Authors
 
@@ -41,6 +41,11 @@ To get a local copy up and running follow these simple example steps.
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](https://github.com/NeckerFree/Capstone-Module-2/issues).
+
+## Acknowledgement
+App-logo(food-logo.png): is gotten from - https://pngtree.com/so/grocery-logo , Reference Name: —Pngtree—black sticky line drawing online_4892039
+
+
 
 ## Show your support
 
