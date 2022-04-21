@@ -4,10 +4,10 @@ const postData = async (url, path = '', data = {}) => {
     method: 'POST',
     body: JSON.stringify(data),
     headers: {
-      'Content-type': 'application/json',
+      'Content-Type': 'application/json',
     },
   });
-  const answer = await response.json();
+  const answer = await response.ok;
   return answer;
 };
 
