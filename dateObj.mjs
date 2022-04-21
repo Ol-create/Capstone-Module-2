@@ -7,9 +7,12 @@ const months = ["Jan", "Feb", "Mar", "Apr", "May", "jun", "Jul", "Aug", "Sep", "
 const dayOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" ];
 
 //Create date variables
-const d = new Date();
-let weekDay = dayOfWeek[d.getDay()];
-let day = d.getDate();
-let month = months[d.getMonth()];
-let year = d.getFullYear();
+export const d = new Date();
+export let weekDay = dayOfWeek[d.getDay()];
+export let day = d.getDate();
+export let month = months[d.getMonth()];
+export let year = d.getFullYear();
+
+//Export date variables
+export {d, weekDay, day, month, year};
    
