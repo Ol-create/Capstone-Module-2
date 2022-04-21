@@ -1,20 +1,20 @@
 footer {
-    border: 1px solid black;
-    padding: 10px 15px;
+  border: 1px solid black;
+  padding: 10px 15px;
 }
 
 .dish {
-    width: 220px;
+  width: 220px;
 }
 
 section {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    padding: 10px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
 }
 
 .meal {
-    padding: 20px;
-    font-size: 20px;
-    text-align: center;
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
 }

@@ -1,20 +1,19 @@
 import './style.css';
-import {
-  getLikes, createLike, getComments, createComment, getReservations, createReservation,
-} from './modules/involvementApi.js';
+// import {
+//   getLikes, createLike, getComments, createComment, getReservations, createReservation,
+// } from './modules/involvementApi.js';
 
 import { getMeals } from './modules/mealDb.js';
+
 const section = document.getElementsByTagName('section')[0];
-const categoryId = '';
 const getInitialData = async () => {
   let content = '';
   const meals = await getMeals('Seafood');
   if (meals !== undefined) {
-
-    let data=Object.values(meals)[0];
-    for (let index = 0; index < data.length; index = index + 1) {
-      const meal = data[index]; 
-      let itemTemplate = `<div class='meal'><img class='dish' src='${meal.strMealThumb}' alt='${meal.strMeal} image' ><p>${meal.strMeal}</p><input type='button' id='${meal.idMeal}' value='Comments'> <input type='button' id='${meal.idMeal}' value='Reservations'></div>`;
+    const data = Object.values(meals)[0];
+    for (let index = 0; index < data.length; index += 1) {
+      const meal = data[index];
+      const itemTemplate = `<div class='meal'><img class='dish' src='${meal.strMealThumb}' alt='${meal.strMeal} image' ><p>${meal.strMeal}</p><input type='submit' id='${meal.idMeal}' value='Comments'> <input type='submit' id='${meal.idMeal}' value='Reservations'></div>`;
       content += itemTemplate;
     }
   }
