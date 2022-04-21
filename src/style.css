@@ -15,6 +15,37 @@ section {
 
 .meal {
   padding: 20px;
-  font-size: 20px;
-  text-align: center;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
 }
+
+.description {
+  display: flex;
+  justify-content: space-between;
+  width: 220px;
+}
+
+.description p {
+  width: 150px;
+}
+
+.likes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  width: 50px;
+}
+
+.likes img {
+  width: 16px;
+}
+
+/* input[type=submit] {
+  width: 100px;
+  margin-left: 0;
+  margin-right: auto;
+  margin-top: 5px;
+} */
