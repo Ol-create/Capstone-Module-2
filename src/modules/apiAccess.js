@@ -12,10 +12,13 @@ const postData = async (url, path = '', data = {}) => {
 };
 
 const getData = async (url, path) => {
+  let data = [];
   const fullUrl = `${url}/${path}`;
-  const response = await fetch(fullUrl);
-  const data = await response.json();
+  const response = await fetch(fullUrl)
+  .catch(error => console.log(error));
+   if (response.ok) {
+    data = await response.json();
+  }
   return data;
 };
-
 export { postData, getData };

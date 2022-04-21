@@ -19,7 +19,7 @@ const createLike = async (itemId) => {
 const getComments = async (itemId) => {
   let answer = [];
   const data = await getData(INVOLVEMENT_API_URL, `apps/${apiId}/comments?item_id=${itemId}`);
-  answer = data.result;
+  answer = data;
   return answer;
 };
 // const createComment = async (itemId, userName, comment) => {
@@ -33,7 +33,7 @@ const getComments = async (itemId) => {
 const getReservations = async (itemId) => {
   let answer = [];
   const data = await getData(INVOLVEMENT_API_URL, `apps/${apiId}/reservations?item_id=${itemId}`);
-  answer = data.result;
+  answer = data;
 
   return answer;
 };
