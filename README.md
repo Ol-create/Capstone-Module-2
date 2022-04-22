@@ -3,17 +3,18 @@
 # Capstone Module 2
 
 
-> Web application based on an external API. The API provides data about a topic.
+> Web application that get data from https://www.themealdb.com/api.php, and maintains likes, comments and reserevations using Involvement API.
 
 
 ## Built With
 
-- Technologies used: HTML, CSS, Javascript
+- Technologies used: HTML, CSS, Javascript, Webpack, Jest
 
 ## Live Demo (if available)
 
 [Live Demo Link](https://neckerfree.github.io/Capstone-Module-2/)
 
+[Presentation Video]()
 
 ## Getting Started
 
@@ -28,6 +29,7 @@ To get a local copy up and running follow these simple example steps.
 ### Install
 - in visual studio code build with the command `npm run build` 
 - and run the distribution with the command `npm start`
+
 ## Authors
 
 👤 **Elio Cortés**

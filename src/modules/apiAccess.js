@@ -1,11 +1,10 @@
+// General functions to access GET and POST methods of any API
 const postData = async (url, path = '', data = {}) => {
   const fullUrl = `${url}/${path}`;
   const response = await fetch(fullUrl, {
     method: 'POST',
     body: JSON.stringify(data),
-    headers: {
-      'Content-Type': 'application/json',
-    },
+    headers: { 'Content-Type': 'application/json' },
   });
   const answer = await response.ok;
   return answer;

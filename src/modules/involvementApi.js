@@ -1,3 +1,4 @@
+// Involvement API methods access
 import { postData, getData } from './apiAccess.js';
 
 const INVOLVEMENT_API_URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
@@ -22,13 +23,6 @@ const getComments = async (itemId) => {
   answer = data;
   return answer;
 };
-// const createComment = async (itemId, userName, comment) => {
-//   const answer = '';
-//    const data = { item_id: `${itemId}`, username: `${userName}`, comment: `${comment}` };
-//    const response = await apiAccess.postData(`apps/${apiId}/comments`, data);
-//    answer = response.result;
-//   return answer;
-// };
 
 const getReservations = async (itemId) => {
   let answer = [];
@@ -37,16 +31,7 @@ const getReservations = async (itemId) => {
 
   return answer;
 };
-// const createReservation = async (itemId, userName, dateStart, dateEnd) => {
-//   const answer = '';
-//   const data = { item_id: `${itemId}`, username: `${userName}`,
-//   date_start: `${dateStart}`, date_end: `${dateEnd}` };
-//   const response = await apiAccess.postData(`apps/${apiId}/reservations`, data);
-//   answer = response.result;
-//   return answer;
-// };
 
 export {
   getLikes, createLike, getComments, getReservations,
-  // getLikes, createLike, getComments, createComment, getReservations, createReservation,
 };

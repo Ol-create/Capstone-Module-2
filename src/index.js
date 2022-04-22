@@ -1,21 +1,38 @@
-import './style.css';
+// APIs references
 import {
   getLikes, createLike, getComments, getReservations,
 } from './modules/involvementApi.js';
 import { getMeals } from './modules/mealDb.js';
-// import {  getLikes, createLike, getComments, createComment, getReservations, createReservation,}
+
+// Styles and images references
+import './style.css';
 import whiteHeart from './icons/whiteHeart.png';
 import redHeart from './icons/redHeart.png';
 
+// DOM references
 const section = document.getElementsByTagName('section')[0];
 const header = document.getElementsByTagName('header')[0];
+
+// Filter variable
 const MEALS_CATEGORY = 'Seafood';
-const getInvolvementData = async () => {
-  const response = await getLikes(); // Promise.all([getLikes()]);
-  return response;
-  // let [likes, comments] = await  Promise.all([getLikes(), getComments()]);
-  // return [likes, comments];
+
+// MealsDB API function
+const getMealsCount = async (category) => {
+  let mealsCount = 0;
+  const meals = await getMeals(category);
+  if (meals !== undefined) {
+    const data = Object.values(meals)[0];
+    mealsCount = data.length;
+  }
+  return mealsCount;
 };
+
+// Involvement API functions
+const getInvolvementData = async () => {
+  const response = await getLikes();
+  return response;
+};
+
 const addLike = async (event) => {
   const heart = event.target;
   const response = await createLike(heart.id);
@@ -41,15 +58,6 @@ const getReservationsById = async (itemId) => {
   const reservations = await getReservations(itemId);
   const countReservations = (reservations === undefined) ? 0 : reservations.length;
   return { countReservations, reservations };
-};
-const getMealsCount = async (category) => {
-  let mealsCount = 0;
-  const meals = await getMeals(category);
-  if (meals !== undefined) {
-    const data = Object.values(meals)[0];
-    mealsCount = data.length;
-  }
-  return mealsCount;
 };
 
 const showCommentsInfo = async (event) => {
