@@ -12,7 +12,7 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link]()
+[Live Demo Link](https://neckerfree.github.io/Capstone-Module-2/)
 
 
 ## Getting Started
