@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "private": true,
-   "scripts": {
+  "scripts": {
     "test": "jest",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
