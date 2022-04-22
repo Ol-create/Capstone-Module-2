@@ -15,8 +15,8 @@ const getData = async (url, path) => {
   let data = [];
   const fullUrl = `${url}/${path}`;
   const response = await fetch(fullUrl)
-  .catch(error => console.log(error));
-   if (response.ok) {
+    .catch((error) => console.log(error));
+  if (response.ok) {
     data = await response.json();
   }
   return data;
